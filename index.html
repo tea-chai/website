@@ -47,22 +47,33 @@
       color: white;
       text-align: center;
     }
+    /* Ensure navbar has enough height */
+   .navbar-nav {
+    display: flex;
+    align-items: center; /* vertical centering */
+    height: 100%;
+  }
 
-   /* Vertically center all navbar <li> items and their content */
-    .navbar-nav > li {
-      display: flex;
-      align-items: center;
-      height: 100%;
-    }
+  /* Style each <li> and its content */
+  .navbar-nav > li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
 
-    .navbar-nav > li > a,
-    .navbar-nav > li > span,
-    .navbar-nav > li > div {
-      display: flex;
-      align-items: center;
-      height: 100%;
-      padding: 15px 10px; /* optional: adjust spacing */
-    }
+  .navbar-nav > li > a,
+  .navbar-nav > li > span,
+  .navbar-nav > li > div {
+    display: flex;
+    align-items: center;
+    height: 50px; /* match Bootstrap's navbar height */
+    padding: 0 15px;
+  }
+
+  /* Fix default Bootstrap nav-item spacing */
+  .navbar-nav > li > a {
+    line-height: normal;
+  }
     </style>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
