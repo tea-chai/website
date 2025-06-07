@@ -75,8 +75,20 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		  <ul class="nav navbar-nav">
         <li><span>..</span></li>
-        <li><div style="font-family: 'Copperplate', Verdana, Geneva, Tahoma, sans-serif; font-size: 40px; color: whitesmoke;"><b>Kamil ddd ERDAYANDI</b></div></li>
-        <li><span>..</span></li>
+        <li>
+  	<div style="font-family: 'Copperplate', Verdana, Geneva, Tahoma, sans-serif; font-size: 40px; color: whitesmoke;">
+    		<b id="name"></b>
+  	</div>
+	</li>
+
+	<script>
+	  	const name = "Kamil Erdayandı";
+	  	const upperName = name.toLocaleUpperCase('tr-TR');
+  		document.getElementById("name").innerText = upperName;
+	</script>
+			  
+			  
+			  <li><span>..</span></li>
         <!-- <li><a href="index.html">Home</a></li> -->
         <li><a href="#research">Research</a></li>
         <li><a href="#teaching">Teaching</a></li>
