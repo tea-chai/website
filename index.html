@@ -15,6 +15,15 @@
   <!-- ----------------  STYLES  ---------------- -->
   <style>
 
+    /* Center navbar items horizontally */
+    .navbar-nav.navbar-center {
+      float: none;
+      margin: 0 auto;
+      display: table;
+      table-layout: fixed;
+    }
+
+
     html {
       scroll-padding-top: 90px; /* Matches or slightly exceeds navbar height */
       scroll-behavior: smooth; /* Optional: smooth scroll effect */
@@ -120,7 +129,7 @@
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-center">
         <li><a href="#research">Research</a></li>
         <li><a href="#teaching">Teaching</a></li>
         <li><a href="#publications">Publications</a></li>
