@@ -1,43 +1,51 @@
-
 <!DOCTYPE html>
 <!--
     Plain-Academic by Vasilios Mavroudis
     Released under the Simplified BSD License/FreeBSD (2-clause) License.
     https://github.com/mavroudisv/plain-academic
 -->
-
 <html lang="en">
 <head>
   <title>Kamil Erdayandı's Personal Homepage</title>
   <link rel="icon" href="profile-picture.jpeg" type="image/icon type">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- ----------------  STYLES  ---------------- -->
   <style>
     ul#links li {
-      display:inline;
+      display: inline;
       padding: 10px;
     }
+
     a.tlk:link, a.tlk:visited, .tlk {
-    background-color: #3bc987;
+      background-color: #3bc987;
     }
+
     .model-box {
-      position:   relative;
-      width:      100%;
+      position: relative;
+      width: 100%;
       height: 0;
-      padding-top:   60%; /* This is your aspect ratio */ }
+      padding-top: 60%; /* This is your aspect ratio */
+    }
+
     .model-prebox {
-      position:   relative;
-      width:      100%;
+      position: relative;
+      width: 100%;
       height: 0;
-      padding-top:   40%; /* This is your aspect ratio */ }
+      padding-top: 40%; /* This is your aspect ratio */
+    }
+
     .model {
       position: absolute;
-      top:      0;
-      left:     0;
-      bottom:   0;
-      right:    0;
-      width:    100%;
-      height:   100%
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
     }
+
     .footer {
       position: fixed;
       left: 0;
@@ -47,233 +55,193 @@
       color: white;
       text-align: center;
     }
+
     /* Ensure navbar has enough height */
-   .navbar-nav {
-    display: flex;
-    align-items: center; /* vertical centering */
-    height: 100%;
-  }
+    .navbar-nav {
+      display: flex;
+      align-items: center; /* vertical centering */
+      height: 100%;
+    }
 
-  /* Style each <li> and its content */
-  .navbar-nav > li {
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
+    /* Style each <li> and its content */
+    .navbar-nav > li {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
 
-  .navbar-nav > li > a,
-  .navbar-nav > li > span,
-  .navbar-nav > li > div {
-    display: flex;
-    align-items: center;
-    height: 50px; /* match Bootstrap's navbar height */
-    padding: 0 15px;
-  }
+    .navbar-nav > li > a,
+    .navbar-nav > li > span,
+    .navbar-nav > li > div {
+      display: flex;
+      align-items: center;
+      height: 50px; /* match Bootstrap's navbar height */
+      padding: 0 15px;
+    }
 
-  /* Fix default Bootstrap nav-item spacing */
-  .navbar-nav > li > a {
-    line-height: normal;
-  }
-    </style>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    /* Fix default Bootstrap nav-item spacing */
+    .navbar-nav > li > a {
+      line-height: normal;
+    }
+  </style>
+
+  <!-- ----------------  LIBRARIES  ---------------- -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+  <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet" type="text/css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
+<!-- ==================================================
+     NAVIGATION
+================================================== -->
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
 
-<!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-		</div>
-
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav">
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav">
         <li><span>..</span></li>
-        <li><div style="font-family: 'Noto Sans', 'Verdana', 'Tahoma', sans-serif; font-size: 25px; color: whitesmoke; margin-left: -10px;"><b>Kamil ERDAYANDI</b></div></li>
+        <li>
+          <div style="font-family: 'Noto Sans', 'Verdana', 'Tahoma', sans-serif; font-size: 25px; color: whitesmoke; margin-left: -10px;">
+            <b>Kamil ERDAYANDI</b>
+          </div>
+        </li>
         <li><span>..</span></li>
-        <!-- <li><a href="index.html">Home</a></li> -->
         <li><a href="#research">Research</a></li>
         <li><a href="#teaching">Teaching</a></li>
-        <li><a href="#publications">Publications</a></li> 
+        <li><a href="#publications">Publications</a></li>
         <li><a href="blogs.html">Blog</a></li>
-        <li><a href="files/Tapajit_Dey_CV.pdf" target="_blank">CV</a></li> 
-		  </ul>
-		</div>
-	  </div>
-	</nav>
-  
-  <!-- Page Content -->
-    <div class="container">
+        <li><a href="files/Tapajit_Dey_CV.pdf" target="_blank">CV</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-        <div class="row">
-
-          <!-- Entries Column -->
-          <div class="col-md-3">
-              
-            <!-- Image & Contact Info-->
-              <img class="img-responsive" src="kamilerdayandi.png" height="350" width="350" alt=""><br>
-              <ul id="links">
-                <li><a href="https://www.linkedin.com/in/kamil-erdayandi-b4245739/"><i class="fa fa-linkedin fa-2x" aria-hidden="true" style="color:black"></i></a></li>
-		<li><a href="https://github.com/tea-chai/"><i class="fa fa-github fa-2x" aria-hidden="true" style="color:black"></i></a></li> 
-              </ul>
-              <!-- <div style="margin-top:3%; text-align:justify;">       -->
-              <p><b>Email:</b> kamil.erdayandi<i class="fa fa-at"></i>marmara<i class="fa fa-circle" aria-hidden="true" style="font-size:3px;"></i>edu<i class="fa fa-circle" aria-hidden="true" style="font-size:3px;"></i>tr<br>
-	      <p><b>Office No:</b>M2-232</p>
-	      <p><b>Office Tel:</b> +90 216 777 35 35</p>
-              <dd><a href="https://scholar.google.com/citations?user=yyc5wNIAAAAJ&hl" target="_blank">Google Scholar</a></dd>  
-              <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0001-9507-662X" href="https://orcid.org/0000-0001-9507-662X" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">0000-0001-9507-662X</a></div>
-              <!-- <dd><a href="files/Tapajit_Dey_CV.pdf" target="_blank">Download CV</a></dd> -->
-               <!-- <dd><a href="files/Research Statement.pdf" target="_blank">Download Research Statement (Generic)</a></dd>
-              <dd><a href="files/Teaching Statement.pdf" target="_blank">Download Teaching Statement (Generic)</a></dd>
-              <dd><a href="files/Diversity Statement.pdf" target="_blank">Download Diversity Statement (Generic)</a></dd> -->
-              </p>     
-          </div>
-
-          <!-- Main Info -->
-          <div class="col-md-9">
-
-            <div class="row">
-              <div style="font-family: Arial, Helvetica, sans-serif; font-size: 28px;"><b>Introduction</b></div>
-              <p>
-                <br>
-                Kamil Erdayandı is a Faculty Member at the <a href="https://cse-eng.marmara.edu.tr/">
-                Computer Engineering department</a> in <a href="https://www.marmara.edu.tr/">Marmara University</a>.
-                <br>
-                He obtained his Ph.D. in Computer Science from the <a href="https://www.utk.edu/">University of Tennessee, Knoxville</a> (UTK)
-                with <a href="http://mockus.org/">Dr. Audris Mockus</a>, with his Ph.D. research focusing on applying data mining and 
-                empirical software engineering techniques for analyzing software ecosystems and software supply chains.
-                Then, he worked as a Postdoctoral Researcher (later promoted to Research Fellow) at <a href="https://www.lero.ie/">Lero, the Science Foundation 
-                Ireland Research Centre for Software</a> at the <a href="https://www.ul.ie/">University of Limerick</a> (UL), 
-                with <a href="https://www.lero.ie/people/brian-fitzgerald">Prof. Brian Fitzgerald</a> on InnerSource and Open Source Software Development, 
-                where he was also one of the founding members of the <a href="https://sfi-lero.github.io/OSPO/">Lero Open Source Program Office</a>.<br>
-                He received his Bachelors and Masters Degree (under the Dual-Degree program) from the <a href="http://www.iitkgp.ac.in/">Indian 
-                Institute of Technology (IIT), Kharagpur</a> in Electronics and Electrical Communication 
-                Engineering and worked in <b>IBM</b> for 3 years before joining Ph.D. <br></br>
-                His research interests comprise the topics of Empirical Software Engineering, Open Source and InnerSource software development, Human Aspects of Software Engineering, 
-                Mining Software Repositories, Data Analysis, and Role of Bots/Automation in Software Development.
-              </p>
-            </div>
-            <!-- <div style="font-family: Arial, Helvetica, sans-serif; font-size: 24px;"><b>I'm on the job market and am looking for positions globally starting in mid-2023. Please <a href="mailto:tapjdey@gmail.com">let me know</a> if you have any leads or are interested in having a discussion!</b></div> -->
-            <!-- NEWS -->
-            <div class="row" style="margin-bottom:1cm;">
-                <br>
-                <div style="font-family: Arial, Helvetica, sans-serif; font-size: 28px;"><b>Latest News (May 2023)</b></div>
-                <ul>
-                    <li>I'll be serving as a PC member in ICSE'24 Technical Track.</li>
-                    <li>I'll be serving as a PC member in PROMISE 2023.</li>
-                    <li>Robert Healy, a professional Ph.D. student I am co-supervising at the University of Limerick, has had a 
-                      paper titled <a href="https://link.springer.com/chapter/10.1007/978-3-031-33976-9_2">"A Novel Technique to Assess Agile Systems for Stability"</a>
-                       accepted at the XP 2023 conference.
-                    </li>
-                    </ul>
-            </div>
-            
-            
-            
-        </div>
-        <br></br>
-        <!-- <div class="row">
-          <br>
-          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 28px;" id="research"><b>Active Research Projects</b></div>
-          <ul>
-            <li><b>TREES Project:</b> Enabling InnerSource software development/Corporate Software Engineering 
-              Capability at Huawei as part of the <a href="https://trees.lero.ie/">TREES</a> project. </li>
-              <ul>
-                <li> <a href="https://tapjdey.github.io/InnerSource_Survey_2020/index.html">Results of the State of the InnerSource survey 2020 </a> [<a href="https://youtu.be/-XWBzcYuvxA" target="_top"> Video of the Talk</a> presented at the <a href="http://innersourcecommons.org/events/isc-apac-dec-2020/">2020 APAC InnerSource Commons summit</a>] </li>
-                <li><a href="https://github.com/tapjdey/InnerSource_Project_Fitness">A tool for estimating the "Fitness" of a project for InnerSource style development.</a> (Can be translated to English and Chinese on the fly)</li>
-                <li>Our proposed model for assessing InnerSource-readiness of a candidate project has been accepted as a Pattern in <a href="https://github.com/InnerSourceCommons/InnerSourcePatterns/blob/master/patterns/1-initial/good-first-project.md">InnerSource Commons</a>.</li>
-              </ul>
-            <li><b>Open Source Newcomers:</b> Facilitating the success of new developers and projects joining the Open Source ecosystem. </li>
-            <ul>
-        </div>  
-        <div class="row">
-          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 28px;"><b>Past/Dormant Research Projects</b></div>
-          <ul>
-            <li>    Research on code-commit bot detection.</li>
-            <li>    Software Supply Chain: Exploring the Effects of Interdependencies in a Software Ecosystem on Popularity.</li>
-            <li>    Predicting Pull Request Quality.</li>
-            <li>	  Effects of Software Usage on Perceived Quality of a Software.</li>
-          </ul>
-        </div>      
-        <br> -->
-        
-          <br>
-          <!-- Teaching -->
-          <div class="row">
-            <div style="font-family: Arial, Helvetica, sans-serif; font-size: 28px;" id="teaching"><b>Teaching</b></div>
-            <ul>
-              <li><b>Fall 2020 - Spring 2023 &mdash;</b> <i>Lecturer</i>: CS4911 - Introduction to Information Technology @ UL </li>
-              <i>Modified the course and assessment to conform with COVID-19 related restrictions & virtual teaching requirements, 
-              included new topics like Cyber Security, Edge & Quantum Computing, and modernized the rest of the lecture topics to include latest developments.</i>
-              <li> <b>Spring 2017 &mdash;</b> <i>Teaching Assistant:</i> <a href="http://web.eecs.utk.edu/~bvanderz/teaching/cs365Sp17/general_info.html"> Programming Languages and Systems</a> @ UTK</li>
-              <li> <b>Fall 2016 &mdash; </b> <i>Teaching Assistant:</i> Fundamentals of Digital Archeology  @ UTK</li>
-              <li><b>Spring 2016 &mdash; </b> <i>Teaching Assistant:</i> <a href="http://web.eecs.utk.edu/~mbeck/classes/Spring16-cs361/"> Operating Systems</a>  @ UTK</li>
-              <li><b> Fall 2015 &mdash; </b> <i>Teaching Assistant:</i> <a href="https://github.com/fdac15"> Fundamentals of Digital Archeology  </a>  @ UTK</li>
-            </ul>
-          </div>
-
-        <br>
-        <!-- Positions & Awards -->
-        <div class="row">
-            <div style="font-family: Arial, Helvetica, sans-serif; font-size: 28px;" ><b> Notable Positions, Awards, and Recognitions</b></div>
-            <br>
-            <ul>
-                <li> <b>[2024] -</b> Will serve as a PC Member (Technical Track) in the ICSE 2024 conference.</li>
-                <li> <b>[2023] -</b> Will serve as a PC Member in the <a href="https://promiseconf.github.io/2023/index.html">PROMISE'23 conference.</a></li>
-                <li> <b>[2023] -</b> Served as the <a href="https://conf.researchr.org/committee/msr-2023/msr-2023-organizing-committee">Publicity & Social Media Co-Chair</a> and <a href="https://conf.researchr.org/track/msr-2023/msr-2023-mining-challenge">Mining Challenge PC Member</a> in the MSR 2023 conference.</li>
-                <li> <b>[2023] -</b> Served as a Program Committee member (Technical Track, Poster Track, Artifact Evaluation Track) in the <a href="https://conf.researchr.org/committee/icse-2023/icse-2023-technical-track-programme-committee">ICSE'23 conference.</a></li> 
-                <li> <b>[2022] -</b> Served as the Proceedings Chair in the <a href="https://promiseconf.github.io/2022/index.html">PROMISE'22 conference.</a></li>
-                <li> <b>[2022] -</b> Served as <a href="https://conf.researchr.org/committee/msr-2022/msr-2022-organizing-committee">Publicity & Social Media Co-Chair</a>, 
-                  <a href="https://conf.researchr.org/committee/msr-2022/msr-2022-shadow-pc-shadow-pc-advisors"> Committee Member in Shadow PC Advisors within the Shadow PC-track</a>,  
-                  and <a href="https://conf.researchr.org/committee/msr-2022/msr-2022-technical-papers-program-committee">Program Committee member (Technical Track)</a> in the MSR 2022 conference.</li>               
-                <li> <b>[2022] -</b> Received the <a href="https://twitter.com/msrconf/status/1520584652997730306">"Distinguished Reviewer Award"</a> for MSR 2022 conference (Technical Track). </li>          
-                <li> <b>[2021] -</b> Received the <a href="https://twitter.com/msrconf/status/1390444181655539716">"Distinguished Reviewer Award"</a> for MSR 2021 conference (Technical Track). </li>
-                <li> <b>[2021] -</b> Served as a Program Committee member (Technical Track) in the <a href="https://2021.msrconf.org/committee/msr-2021-technical-papers-program-committee">MSR'21 conference.</a></li>
-                <li> <b>[2021] -</b> Served as a Program Committee member in the <a href="https://www.oss2021.org/committee/oss-2021-papers-program-committee">OSS'21 conference.</a></li>
-                <li> <b>[2019] -</b> Our paper  <i>"Patterns of Effort Contribution and Demand and User Classification based on Participation Patterns in NPM Ecosystem"</i> received the <b>Best Paper Award </b> at the <a href="http://promisedata.org/2019/index.html">PROMISE - 2019</a> conference. </li>
-                <li> <b>[2017] -</b> Received the <i>Best Graduate Research Assistant</i> award and scholarshop from the University of Tennessee EECS department.</li>
-            </ul>
-        </div>
-        
-        <!-- Publications -->
-        <div class="col-md-12" >  
-          <br>  
-          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 28px;" id="publications"><b>Publications - Peer Reviewed & Published</b></div>
-            
-          <div class="model-box">
-            <iframe class="model" src="pubs.html" frameborder="0" allowfullscreen="" ></iframe>
-          </div>
-          <br>
-          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 28px;" id="publications"><b>Preprints, Datasets, Misc.</b></div>
-            
-          <div class="model-prebox">
-            <iframe class="model" src="misc.html" frameborder="0" allowfullscreen="" ></iframe>
-          </div>
-
-        </div>
-            
-      </div>
-      <div class="footer">
-        Content Copyright &copy;<script>document.write(new Date().getFullYear());</script> Kamil Erdayandı &mdash; All rights reserved | This template is made with <a style="color:#ebeff3;font-size:0.8em;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
+<!-- ==================================================
+     PAGE CONTENT
+================================================== -->
+<div class="container">
+  <div class="row">
+    <!-- ================ LEFT COLUMN (PHOTO & CONTACT) ================ -->
+    <div class="col-md-3">
+      <img class="img-responsive" src="kamilerdayandi.png" height="350" width="350" alt="Profile Picture"><br>
+      <ul id="links">
+        <li><a href="https://www.linkedin.com/in/kamil-erdayandi-b4245739/"><i class="fa fa-linkedin fa-2x" aria-hidden="true" style="color:black"></i></a></li>
+        <li><a href="https://github.com/tea-chai/"><i class="fa fa-github fa-2x" aria-hidden="true" style="color:black"></i></a></li>
+      </ul>
+      <p>
+        <b>Email:</b> kamil.erdayandi<i class="fa fa-at"></i>marmara<i class="fa fa-circle" aria-hidden="true" style="font-size:3px;"></i>edu<i class="fa fa-circle" aria-hidden="true" style="font-size:3px;"></i>tr<br>
+        <b>Office No:</b> M2-232<br>
+        <b>Office Tel:</b> +90 216 777 35 35
+      </p>
+      <dd><a href="https://scholar.google.com/citations?user=yyc5wNIAAAAJ&hl" target="_blank">Google Scholar</a></dd>
+      <div itemscope itemtype="https://schema.org/Person">
+        <a itemprop="sameAs" content="https://orcid.org/0000-0001-9507-662X" href="https://orcid.org/0000-0001-9507-662X" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;">
+          <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">0000-0001-9507-662X
+        </a>
       </div>
     </div>
-    <!-- /.container -->
-    
-    
-    
-</body>
 
+    <!-- ================ RIGHT COLUMN (CONTENT) ================ -->
+    <div class="col-md-9">
+
+      <!-- ---------- INTRODUCTION ---------- -->
+      <div class="row">
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size: 28px;"><b>Introduction</b></div>
+        <p>
+          <br>
+          Kamil Erdayandı is a Faculty Member at the <a href="https://cse-eng.marmara.edu.tr/">Computer Engineering department</a> in <a href="https://www.marmara.edu.tr/">Marmara University</a>.
+          <br>
+          He obtained his Ph.D. in Computer Science from the <a href="https://www.utk.edu/">University of Tennessee, Knoxville</a> (UTK) with <a href="http://mockus.org/">Dr. Audris Mockus</a>, focusing on data mining and empirical software engineering techniques for analyzing software ecosystems and supply chains.
+          Then, he worked as a Postdoctoral Researcher (later promoted to Research Fellow) at <a href="https://www.lero.ie/">Lero, the Science Foundation Ireland Research Centre for Software</a> at the <a href="https://www.ul.ie/">University of Limerick</a> (UL) with <a href="https://www.lero.ie/people/brian-fitzgerald">Prof. Brian Fitzgerald</a> on InnerSource and Open Source Software Development, where he was also one of the founding members of the <a href="https://sfi-lero.github.io/OSPO/">Lero Open Source Program Office</a>.
+          <br>
+          He received his Bachelors and Masters Degree (under the Dual-Degree program) from the <a href="http://www.iitkgp.ac.in/">Indian Institute of Technology (IIT), Kharagpur</a> in Electronics and Electrical Communication Engineering, and worked in <b>IBM</b> for 3 years before starting his Ph.D.
+          <br><br>
+          His research interests include Empirical Software Engineering, Open Source and InnerSource software development, Human Aspects of Software Engineering, Mining Software Repositories, Data Analysis, and the Role of Bots/Automation in Software Development.
+        </p>
+      </div>
+
+      <!-- ---------- LATEST NEWS ---------- -->
+      <div class="row" style="margin-bottom:1cm;">
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size: 28px;"><b>Latest News (May 2023)</b></div>
+        <ul>
+          <li>I'll be serving as a PC member in ICSE'24 Technical Track.</li>
+          <li>I'll be serving as a PC member in PROMISE 2023.</li>
+          <li>
+            Robert Healy, a professional Ph.D. student I co‑supervise at the University of Limerick, had a paper titled
+            <a href="https://link.springer.com/chapter/10.1007/978-3-031-33976-9_2">"A Novel Technique to Assess Agile Systems for Stability"</a>
+            accepted at the XP 2023 conference.
+          </li>
+        </ul>
+      </div>
+
+      <!-- ---------- TEACHING ---------- -->
+      <div class="row" id="teaching">
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size: 28px;"><b>Teaching</b></div>
+        <ul>
+          <li><b>Fall 2020 – Spring 2023 —</b> <i>Lecturer</i>: CS4911 - Introduction to Information Technology @ UL</li>
+          <i>Modified the course and assessment to conform with COVID‑19 restrictions & virtual teaching requirements, added new topics like Cyber Security, Edge & Quantum Computing, and modernised remaining lecture topics.</i>
+          <li><b>Spring 2017 —</b> <i>Teaching Assistant:</i> <a href="http://web.eecs.utk.edu/~bvanderz/teaching/cs365Sp17/general_info.html">Programming Languages and Systems</a> @ UTK</li>
+          <li><b>Fall 2016 —</b> <i>Teaching Assistant:</i> Fundamentals of Digital Archeology @ UTK</li>
+          <li><b>Spring 2016 —</b> <i>Teaching Assistant:</i> <a href="http://web.eecs.utk.edu/~mbeck/classes/Spring16-cs361/">Operating Systems</a> @ UTK</li>
+          <li><b>Fall 2015 —</b> <i>Teaching Assistant:</i> <a href="https://github.com/fdac15">Fundamentals of Digital Archeology</a> @ UTK</li>
+        </ul>
+      </div>
+
+      <!-- ---------- POSITIONS / AWARDS ---------- -->
+      <div class="row">
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size: 28px;"><b>Notable Positions, Awards, and Recognitions</b></div>
+        <br>
+        <ul>
+          <li><b>[2024] —</b> PC Member (Technical Track), ICSE 2024.</li>
+          <li><b>[2023] —</b> PC Member, <a href="https://promiseconf.github.io/2023/index.html">PROMISE 2023</a>.</li>
+          <li><b>[2023] —</b> Publicity & Social Media Co‑Chair and Mining Challenge PC Member, MSR 2023.</li>
+          <li><b>[2023] —</b> Program Committee (Technical, Poster, Artifact Evaluation), <a href="https://conf.researchr.org/committee/icse-2023/icse-2023-technical-track-programme-committee">ICSE 2023</a>.</li>
+          <li><b>[2022] —</b> Proceedings Chair, <a href="https://promiseconf.github.io/2022/index.html">PROMISE 2022</a>.</li>
+          <li><b>[2022] —</b> Publicity & Social Media Co‑Chair and Shadow‑PC Advisor, MSR 2022; Distinguished Reviewer Award (Technical Track).</li>
+          <li><b>[2021] —</b> Distinguished Reviewer Award, MSR 2021 (Technical Track); PC Member, MSR 2021 and OSS 2021.</li>
+          <li><b>[2019] —</b> Best Paper Award for "Patterns of Effort Contribution…" at <a href="http://promisedata.org/2019/index.html">PROMISE 2019</a>.</li>
+          <li><b>[2017] —</b> Best Graduate Research Assistant Award, University of Tennessee EECS.</li>
+        </ul>
+      </div>
+
+      <!-- ---------- PUBLICATIONS ---------- -->
+      <div class="row">
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size: 28px;" id="publications"><b>Publications ‑ Peer Reviewed & Published</b></div>
+        <div class="model-box">
+          <iframe class="model" src="pubs.html" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+      </div>
+
+      <div class="row">
+        <br>
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size: 28px;"><b>Preprints, Datasets, Misc.</b></div>
+        <div class="model-prebox">
+          <iframe class="model" src="misc.html" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+      </div>
+
+    </div> <!-- /col-md-9 -->
+  </div> <!-- /row -->
+
+  <!-- ==================================================
+       FOOTER
+  ================================================== -->
+  <div class="footer">
+    Content Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+    Kamil Erdayandı &mdash; All rights reserved | Template: <a style="color:#ebeff3;font-size:0.8em;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a>
+  </div>
+</div> <!-- /.container -->
+
+</body>
 </html>
